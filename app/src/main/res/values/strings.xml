@@ -16,9 +16,6 @@
     <string name="toggle_theme">Ubah Tema Gelap/Terang</string>
     <string name="app_logo_description">Logo Penghitung Kata</string>
     <string name="result_icon_description">Ikon Hasil</string>
-    <string name="kembali">Kembali</string>
-    <string name="copyright"> © 2025 Penghitung Kata.</string>
-    <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="word_counter_intro">Aplikasi ini dapat membantu kita menghitung jumlah kata, karakter, dan kalimat dalam teks.</string>
     <string name="input_text">Masukkan teks di sini</string>
     <string name="input_invalid">Input tidak boleh kosong</string>
@@ -40,6 +37,7 @@
     <string name="total_karakter">Total Karakter</string>
     <string name="total_karakter_no_space">Total Karakter (tanpa spasi)</string>
     <string name="total_kalimat">Total Kalimat</string>
+    <string name="kembali">Kembali</string>
     <string name="rata_panjang_kata">Rata-rata Panjang Kata</string>
     <string name="kata_per_kalimat">Kata per Kalimat</string>
     <string name="bagikan_analisis">Bagikan</string>
