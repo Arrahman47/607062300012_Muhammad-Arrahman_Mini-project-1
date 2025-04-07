@@ -24,7 +24,7 @@
     <string name="word_count">Jumlah Kata: %d</string>
     <string name="char_count">Jumlah Karakter: %d</string>
     <string name="char_no_space_count">Jumlah Karakter (tanpa spasi): %d</string>
-    <string name="sentence_count">Jumlah Kalimat: %d</string>
+    <string name="sentence_count">Jumlah Kalimat: %d</string>`
     <string name="lihat_detail">Lihat Detail</string>
     <string name="bagikan">Bagikan</string>
     <string name="bagikan_via">Bagikan Melalui</string>
@@ -32,6 +32,7 @@
     <string name="share_template">Analisis Teks:\n\nTeks: %1$s\n\nJumlah Kata: %2$d\nJumlah Karakter: %3$d\nJumlah Karakter (tanpa spasi): %4$d\nJumlah Kalimat: %5$d</string>
     <string name="detail_analisis">Detail Analisis</string>
     <string name="teks_input">Teks Input</string>
+    <string name="tentang_aplikasi" translatable="false">Tentang aplikasi</string>
     <string name="hasil_analisis">Hasil Analisis</string>
     <string name="total_kata">Total Kata</string>
     <string name="total_karakter">Total Karakter</string>
@@ -41,5 +42,8 @@
     <string name="rata_panjang_kata">Rata-rata Panjang Kata</string>
     <string name="kata_per_kalimat">Kata per Kalimat</string>
     <string name="bagikan_analisis">Bagikan</string>
+    <string name="menu_overflow" translatable="false">Menu</string>
+    <string name="love" translatable="false">Boom Love</string>
+    <string name="face" translatable="false">Boom Face</string>
     <string name="share_detail_template">Analisis Teks Lengkap:\n\nTeks: %1$s\n\nTotal Kata: %2$d\nTotal Karakter: %3$d\nTotal Karakter (tanpa spasi): %4$d\nTotal Kalimat: %5$d\nRata-rata Panjang Kata: %6$s\nKata per Kalimat: %7$s</string>
 </resources>

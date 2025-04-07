@@ -1,5 +1,6 @@
 package com.rahman.aplikasihitungkata.ui.theme.screen
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
@@ -14,11 +15,20 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.outlined.Face
+import androidx.compose.material.icons.outlined.FavoriteBorder
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -50,6 +60,10 @@ import com.rahman.aplikasihitungkata.ui.theme.theme.Aplikasihitungkata2Theme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(navController: NavHostController) {
+
+    var showMenu by rememberSaveable { mutableStateOf(false) }
+    var isDarkTheme by rememberSaveable { mutableStateOf(false) }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -57,7 +71,62 @@ fun MainScreen(navController: NavHostController) {
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.primary,
-                )
+                ),
+                actions = {
+
+                    IconButton(onClick = { showMenu = !showMenu }) {
+                        Icon(
+                            imageVector = Icons.Default.MoreVert,
+                            contentDescription = stringResource(id = R.string.menu_overflow)
+                        )
+                    }
+
+
+                    DropdownMenu(
+                        expanded = showMenu,
+                        onDismissRequest = { showMenu = false }
+                    ) {
+
+                        DropdownMenuItem(
+                            text = { Text(stringResource(R.string.tentang_aplikasi)) },
+                            leadingIcon = {
+                                Icon(
+                                    imageVector = Icons.Outlined.Info,
+                                    contentDescription = null
+                                )
+                            },
+                            onClick = {
+                                showMenu = false
+                                navController.navigate(Screen.About.route)
+                            }
+                        )
+
+
+                        DropdownMenuItem(
+                            text = {
+                                Text(
+                                    if (isDarkTheme)
+                                        stringResource(R.string.love)
+                                    else
+                                        stringResource(R.string.face)
+                                )
+                            },
+                            leadingIcon = {
+                                Icon(
+                                    imageVector = if (isDarkTheme)
+                                        Icons.Outlined.Face
+                                    else
+                                        Icons.Outlined.FavoriteBorder,
+                                    contentDescription = null
+                                )
+                            },
+                            onClick = {
+                                isDarkTheme = !isDarkTheme
+                                showMenu = false
+                            }
+                        )
+                    }
+                }
             )
         }
     ) { innerPadding ->
@@ -119,6 +188,7 @@ fun ScreenContent(modifier: Modifier = Modifier, navController: NavHostControlle
             ),
             modifier = Modifier.fillMaxWidth()
         )
+
 
 
         Button(
@@ -245,6 +315,7 @@ private fun countSentences(text: String): Int {
     return sentences.size
 }
 
+@SuppressLint("StringFormatInvalid")
 private fun shareTextAnalysis(
     context: Context,
     inputText: String,
