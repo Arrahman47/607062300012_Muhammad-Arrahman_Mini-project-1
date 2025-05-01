@@ -1,49 +1,19 @@
 <resources>
-    <string name="app_name">Penghitung Kata</string>
-    <string name="app_title">Penghitung Kata</string>
-    <string name="enter_text_hint">Masukkan teks Anda di sini</string>
-    <string name="count_words">Hitung Kata</string>
-    <string name="share_text">Bagikan Teks</string>
-    <string name="show_details">Tampilkan Detail</string>
-    <string name="word_count_result">Kata: %d</string>
-    <string name="char_count_result">Karakter: %d</string>
-    <string name="error_empty_input">Mohon masukkan teks</string>
-    <string name="share_via">Bagikan melalui</string>
-    <string name="results_title">Analisis Teks</string>
-    <string name="share_results">Bagikan Hasil</string>
-    <string name="back_to_input">Kembali ke Input</string>
-    <string name="share_results_text">Teks: %1$s\n\nJumlah kata: %2$d\nJumlah karakter: %3$d</string>
-    <string name="toggle_theme">Ubah Tema Gelap/Terang</string>
-    <string name="app_logo_description">Logo Penghitung Kata</string>
-    <string name="result_icon_description">Ikon Hasil</string>
-    <string name="word_counter_intro">Aplikasi ini dapat membantu kita menghitung jumlah kata, karakter, dan kalimat dalam teks.</string>
-    <string name="input_text">Masukkan teks di sini</string>
-    <string name="input_invalid">Input tidak boleh kosong</string>
-    <string name="hitung">Hitung</string>
-    <string name="hasil_perhitungan">Hasil Perhitungan</string>
-    <string name="word_count">Jumlah Kata: %d</string>
-    <string name="char_count">Jumlah Karakter: %d</string>
-    <string name="char_no_space_count">Jumlah Karakter (tanpa spasi): %d</string>
-    <string name="sentence_count">Jumlah Kalimat: %d</string>`
-    <string name="lihat_detail">Lihat Detail</string>
-    <string name="bagikan">Bagikan</string>
-    <string name="bagikan_via">Bagikan Melalui</string>
-    <string name="app_logo_desc">Logo Aplikasi Penghitung Kata</string>
-    <string name="share_template">Analisis Teks:\n\nTeks: %1$s\n\nJumlah Kata: %2$d\nJumlah Karakter: %3$d\nJumlah Karakter (tanpa spasi): %4$d\nJumlah Kalimat: %5$d</string>
-    <string name="detail_analisis">Detail Analisis</string>
-    <string name="teks_input">Teks Input</string>
-    <string name="tentang_aplikasi" translatable="false">Tentang aplikasi</string>
-    <string name="hasil_analisis">Hasil Analisis</string>
-    <string name="total_kata">Total Kata</string>
-    <string name="total_karakter">Total Karakter</string>
-    <string name="total_karakter_no_space">Total Karakter (tanpa spasi)</string>
-    <string name="total_kalimat">Total Kalimat</string>
+    <string name="app_name">Komik</string>
+    <string name="list_kosong">Belum ada data</string>
+    <string name="x_diklik">%1$s diklik!</string>
+    <string name="tambah_komik">Tambah komik</string>
     <string name="kembali">Kembali</string>
-    <string name="rata_panjang_kata">Rata-rata Panjang Kata</string>
-    <string name="kata_per_kalimat">Kata per Kalimat</string>
-    <string name="bagikan_analisis">Bagikan</string>
-    <string name="menu_overflow" translatable="false">Menu</string>
-    <string name="love" translatable="false">Boom Love</string>
-    <string name="face" translatable="false">Boom Face</string>
-    <string name="share_detail_template">Analisis Teks Lengkap:\n\nTeks: %1$s\n\nTotal Kata: %2$d\nTotal Karakter: %3$d\nTotal Karakter (tanpa spasi): %4$d\nTotal Kalimat: %5$d\nRata-rata Panjang Kata: %6$s\nKata per Kalimat: %7$s</string>
+    <string name="judul">Nama</string>
+    <string name="isi_komik">Genre</string>
+    <string name="simpan">Simpan</string>
+    <string name="edit_komik">Ubah komik</string>
+    <string name="invalid">Nama dan genre komik tidak boleh kosong.</string>
+    <string name="lainnya">Opsi lainnya</string>
+    <string name="hapus">Hapus komik</string>
+    <string name="pesan_hapus">Hapus komik ini?</string>
+    <string name="tombol_hapus">Hapus</string>
+    <string name="tombol_batal">Batal</string>
+    <string name="list">Tampilan list</string>
+    <string name="grid">Tampilan grid</string>
 </resources>
