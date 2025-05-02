@@ -24,8 +24,10 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -65,12 +67,10 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
     val context = LocalContext.current
     val factory = ViewModelFactory(context)
     val viewModel: DetailViewModel = viewModel(factory = factory)
-
     val calendar = remember { Calendar.getInstance() }
     val dateFormatter = remember {
         SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
     }
-
     var nama by remember { mutableStateOf("") }
     var genre by remember { mutableStateOf("") }
     var rilis by remember { mutableStateOf(dateFormatter.format(calendar.time)) }
@@ -97,7 +97,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.kembali),
-                            tint = Color.Magenta
+                            tint = Color.Blue
                         )
                     }
                 },
@@ -105,6 +105,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                     Text(
                         text = if (id == null)
                             stringResource(R.string.tambah_komik)
+
                         else
                             stringResource(R.string.edit_komik)
                     )
@@ -131,7 +132,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                         Icon(
                             imageVector = Icons.Outlined.Check,
                             contentDescription = stringResource(R.string.simpan),
-                            tint = Color.Magenta
+                            tint = Color.Blue
                         )
                     }
                     if (id != null) {
@@ -174,7 +175,7 @@ fun DeleteAction(delete: () -> Unit) {
         Icon(
             imageVector = Icons.Filled.MoreVert,
             contentDescription = stringResource(R.string.lainnya),
-            tint = MaterialTheme.colorScheme.primary
+            tint = Color.Blue
         )
         DropdownMenu(
             expanded = expanded,
@@ -249,15 +250,26 @@ fun FormCatatan(
                 OutlinedTextField(
                     value = title,
                     onValueChange = onTitleChange,
-                    label = { Text(stringResource(R.string.judul)) },
+                    label = {
+                        Text(
+                            stringResource(R.string.judul),
+                            color = Color.Red
+                        )
+                    },
                     leadingIcon = {
                         Icon(
                             painter = painterResource(R.drawable.baseline_drive_file_rename_outline_24),
                             contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+                            tint = Color.Red,
                             modifier = Modifier.size(24.dp)
                         )
                     },
+                    textStyle = LocalTextStyle.current.copy(color = Color.Red),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = Color.Red,
+                        unfocusedBorderColor = Color.Red,
+                        cursorColor = Color.Red
+                    ),
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(
                         capitalization = KeyboardCapitalization.Words,
@@ -269,24 +281,38 @@ fun FormCatatan(
                 OutlinedTextField(
                     value = desc,
                     onValueChange = onDescChange,
-                    label = { Text(stringResource(R.string.isi_komik)) },
+                    label = {
+                        Text(
+                            stringResource(R.string.isi_komik),
+                            color = Color.Red
+                        )
+                    },
                     leadingIcon = {
                         Icon(
                             painter = painterResource(R.drawable.baseline_category_24),
                             contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+                            tint = Color.Red,
                             modifier = Modifier.size(24.dp)
                         )
                     },
                     keyboardOptions = KeyboardOptions(
                         capitalization = KeyboardCapitalization.Sentences
                     ),
+                    textStyle = LocalTextStyle.current.copy(color = Color.Red),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = Color.Red,
+                        unfocusedBorderColor = Color.Red,
+                        cursorColor = Color.Red
+                    ),
                     modifier = Modifier.fillMaxWidth()
                 )
 
+
                 Text(
-                    text = "Tanggal Rilis",
-                    style = MaterialTheme.typography.titleMedium
+                    text = "Tanggal Baca",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = Color.Red
+
                 )
 
                 Box(
@@ -299,13 +325,23 @@ fun FormCatatan(
                         onValueChange = {},
                         readOnly = true,
                         enabled = false,
-                        label = { Text("Pilih Tanggal") },
+
+                        label = { Text("Pilih Tanggal", color = Color.Red) },
                         trailingIcon = {
                             Icon(
                                 painter = painterResource(R.drawable.baseline_calendar_month_24),
-                                contentDescription = null
+                                contentDescription = null,
+                                tint = Color.Red
                             )
                         },
+                        textStyle = LocalTextStyle.current.copy(color = Color.Red),
+                        colors = OutlinedTextFieldDefaults.colors(
+                            disabledBorderColor = Color.Red,
+                            disabledLabelColor = Color.Red,
+                            disabledTextColor = Color.Red,
+                            disabledTrailingIconColor = Color.Red,
+                            disabledPlaceholderColor = Color.Red
+                        ),
                         modifier = Modifier.fillMaxWidth()
                     )
                 }
@@ -313,7 +349,6 @@ fun FormCatatan(
         }
     }
 }
-
 
 
 

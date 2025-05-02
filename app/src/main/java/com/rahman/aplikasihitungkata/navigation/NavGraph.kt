@@ -10,6 +10,7 @@ import androidx.navigation.NavType
 import com.rahman.aplikasihitungkata.ui.theme.screen.MainScreen
 import com.rahman.aplikasihitungkata.ui.theme.screen.DetailScreen
 import com.rahman.aplikasihitungkata.ui.theme.screen.KEY_ID_CATATAN
+import com.rahman.aplikasihitungkata.ui.theme.screen.ThemeScreen
 
 
 @Composable
@@ -23,6 +24,9 @@ fun SetupNavGraph(navController: NavHostController = rememberNavController()) {
         }
         composable(route = Screen.FormBaru.route) {
             DetailScreen(navController)
+        }
+        composable(route = Screen.Theme.route) {
+            ThemeScreen(navController)
         }
         composable(
             route = Screen.FormUbah.route,

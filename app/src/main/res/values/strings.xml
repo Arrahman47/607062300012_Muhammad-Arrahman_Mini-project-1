@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">Komik</string>
+    <string name="app_name">Aplikasi jadwal membaca komik</string>
     <string name="list_kosong">Belum ada data</string>
     <string name="x_diklik">%1$s diklik!</string>
-    <string name="tambah_komik">Tambah komik</string>
+    <string name="tambah_komik">Tambah jadwal komik yang ingin dibaca</string>
     <string name="kembali">Kembali</string>
     <string name="judul">Nama</string>
     <string name="isi_komik">Genre</string>
     <string name="simpan">Simpan</string>
-    <string name="edit_komik">Ubah komik</string>
+    <string name="edit_komik">Ubah jadwal komik yang ingin dibaca</string>
     <string name="invalid">Nama dan genre komik tidak boleh kosong.</string>
     <string name="lainnya">Opsi lainnya</string>
     <string name="hapus">Hapus komik</string>
