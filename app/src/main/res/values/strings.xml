@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aplikasi jadwal membaca komik</string>
+    <string name="app_name">Aplikasi kelola jadwal membaca komik</string>
     <string name="list_kosong">Belum ada data</string>
     <string name="x_diklik">%1$s diklik!</string>
     <string name="tambah_komik">Tambah jadwal komik yang ingin dibaca</string>

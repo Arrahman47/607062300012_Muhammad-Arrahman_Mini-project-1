@@ -92,7 +92,7 @@ fun MainScreen(navController: NavHostController) {
                     Text(text = stringResource(id = R.string.app_name))
                 },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
-                    containerColor = Color(0xFF00897B),
+                    containerColor = Color.DarkGray,
                     titleContentColor = Color.White,
                     navigationIconContentColor = Color.White,
                     actionIconContentColor = Color.White
@@ -112,7 +112,7 @@ fun MainScreen(navController: NavHostController) {
                                 if (showList) R.string.grid
                                 else R.string.list
                             ),
-                            tint = Color.Blue
+                            tint = Color(0xFFFF9800)
                         )
                     }
 
@@ -121,7 +121,7 @@ fun MainScreen(navController: NavHostController) {
                         Icon(
                             imageVector = Icons.Default.MoreVert,
                             contentDescription = "Menu",
-                            tint = Color.Blue
+                            tint = Color(0xFFFF9800)
                         )
                     }
 
@@ -142,12 +142,12 @@ fun MainScreen(navController: NavHostController) {
         },
         floatingActionButton = {
             ExtendedFloatingActionButton(
-                text = { Text(text = "Tambah", color = Color.Blue) },
+                text = { Text(text = "Tambah", color = Color(0xFFFF9800)) },
                 icon = {
                     Icon(
                         imageVector = Icons.Filled.Add,
                         contentDescription = stringResource(R.string.tambah_komik),
-                        tint = Color.Blue
+                        tint = Color(0xFFFF9800)
                     )
                 },
                 onClick = {

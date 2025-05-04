@@ -97,7 +97,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.kembali),
-                            tint = Color.Blue
+                            tint = Color(0xFFFF9800)
                         )
                     }
                 },
@@ -111,7 +111,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                     )
                 },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
-                    containerColor = Color(0xFF00897B),
+                    containerColor = Color.DarkGray,
                     titleContentColor = Color.White,
                     navigationIconContentColor = Color.White,
                     actionIconContentColor = Color.White
@@ -132,7 +132,7 @@ fun DetailScreen(navController: NavHostController, id: Long? = null) {
                         Icon(
                             imageVector = Icons.Outlined.Check,
                             contentDescription = stringResource(R.string.simpan),
-                            tint = Color.Blue
+                            tint = Color(0xFFFF9800)
                         )
                     }
                     if (id != null) {
@@ -175,7 +175,7 @@ fun DeleteAction(delete: () -> Unit) {
         Icon(
             imageVector = Icons.Filled.MoreVert,
             contentDescription = stringResource(R.string.lainnya),
-            tint = Color.Blue
+            tint = Color(0xFFFF9800)
         )
         DropdownMenu(
             expanded = expanded,
