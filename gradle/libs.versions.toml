@@ -1,6 +1,7 @@
 [versions]
-agp = "8.9.1"
+agp = "8.2.2"
 kotlin = "2.0.0"
+devtoolsKsp = "2.0.0-1.0.24"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -10,6 +11,9 @@ activityCompose = "1.10.0"
 composeBom = "2024.04.01"
 navCompose = "2.8.7"
 storage = "1.5.0"
+roomRuntime = "2.6.1"
+datastorePreferences = "1.1.4"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,9 +32,14 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navCompose"}
 androidx-storage = { group = "androidx.test.services", name = "storage", version.ref = "storage" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomRuntime"}
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomRuntime"}
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomRuntime"}
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.24" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.10" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "devtoolsKsp" }
 
