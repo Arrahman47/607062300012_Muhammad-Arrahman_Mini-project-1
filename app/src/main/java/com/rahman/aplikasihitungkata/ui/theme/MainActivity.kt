@@ -61,6 +61,7 @@ class MainActivity : ComponentActivity() {
                 onBackground = Color.Black
             )
 
+
             AppTheme.SYSTEM -> if (isSystemInDarkTheme()) darkColorScheme() else lightColorScheme()
         }
 
